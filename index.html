@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./assets/StyleSheet/style.css" />
-    <title>Bankist | When Banking meets Minimalist</title>
+    <title>Bankist // When Banking meets Minimalist</title>
   </head>
   <body>
     <header class="header">
@@ -82,7 +82,7 @@
         <div class="features__feature">
           <div class="features__icon">
             <svg>
-              <use xlink:href="img/icons.svg#icon-monitor"></use>
+              <use xlink:href="./assets/Images/icons.svg#icon-monitor"></use>
             </svg>
           </div>
           <h5 class="features__header">100% digital bank</h5>
@@ -96,7 +96,9 @@
         <div class="features__feature">
           <div class="features__icon">
             <svg>
-              <use xlink:href="img/icons.svg#icon-trending-up"></use>
+              <use
+                xlink:href="./assets/Images/icons.svg#icon-trending-up"
+              ></use>
             </svg>
           </div>
           <h5 class="features__header">Watch your money grow</h5>
@@ -122,7 +124,9 @@
         <div class="features__feature">
           <div class="features__icon">
             <svg>
-              <use xlink:href="img/icons.svg#icon-credit-card"></use>
+              <use
+                xlink:href="./assets/Images/icons.svg#icon-credit-card"
+              ></use>
             </svg>
           </div>
           <h5 class="features__header">Free debit card included</h5>
@@ -163,7 +167,7 @@
         >
           <div class="operations__icon operations__icon--1">
             <svg>
-              <use xlink:href="img/icons.svg#icon-upload"></use>
+              <use xlink:href="./assets/Images/icons.svg#icon-upload"></use>
             </svg>
           </div>
           <h5 class="operations__header">
@@ -180,7 +184,7 @@
         <div class="operations__content operations__content--2">
           <div class="operations__icon operations__icon--2">
             <svg>
-              <use xlink:href="img/icons.svg#icon-home"></use>
+              <use xlink:href="./assets/Images/icons.svg#icon-home"></use>
             </svg>
           </div>
           <h5 class="operations__header">
@@ -196,7 +200,7 @@
         <div class="operations__content operations__content--3">
           <div class="operations__icon operations__icon--3">
             <svg>
-              <use xlink:href="img/icons.svg#icon-user-x"></use>
+              <use xlink:href="./assets/Images/icons.svg#icon-user-x"></use>
             </svg>
           </div>
           <h5 class="operations__header">
@@ -233,7 +237,11 @@
               autem esse non voluptatem saepe provident nihil molestiae.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-1.jpg" alt="" class="testimonial__photo" />
+              <img
+                src="./assets/Images/user-1.jpg"
+                alt=""
+                class="testimonial__photo"
+              />
               <h6 class="testimonial__name">Aarav Lynn</h6>
               <p class="testimonial__location">San Francisco, USA</p>
             </address>
@@ -253,7 +261,11 @@
               deserunt exercitationem deleniti.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-2.jpg" alt="" class="testimonial__photo" />
+              <img
+                src="./assets/Images/user-2.jpg"
+                alt=""
+                class="testimonial__photo"
+              />
               <h6 class="testimonial__name">Miyah Miles</h6>
               <p class="testimonial__location">London, UK</p>
             </address>
@@ -274,7 +286,11 @@
               alias reiciendis, perferendis facere.
             </blockquote>
             <address class="testimonial__author">
-              <img src="img/user-3.jpg" alt="" class="testimonial__photo" />
+              <img
+                src="./assets/Images/user-3.jpg"
+                alt=""
+                class="testimonial__photo"
+              />
               <h6 class="testimonial__name">Francisco Gomes</h6>
               <p class="testimonial__location">Lisbon, Portugal</p>
             </address>
@@ -321,7 +337,7 @@
           <a class="footer__link" href="#">Contact Us</a>
         </li>
       </ul>
-      <img src="img/icon.png" alt="Logo" class="footer__logo" />
+      <img src="./assets/Images/icon.png" alt="Logo" class="footer__logo" />
       <p class="footer__copyright">
         &copy; Copyright by
         <a
@@ -333,6 +349,24 @@
         as your own product.
       </p>
     </footer>
+    
+    <div class="modal hidden">
+      <button class="btn--close-modal">&times;</button>
+      <h2 class="modal__header">
+        Open your bank account <br />
+        in just <span class="highlight">5 minutes</span>
+      </h2>
+      <form class="modal__form">
+        <label>First Name</label>
+        <input type="text" />
+        <label>Last Name</label>
+        <input type="text" />
+        <label>Email Address</label>
+        <input type="email" />
+        <button class="btn">Next step &rarr;</button>
+      </form>
+    </div>
+    <div class="overlay hidden"></div>
 
     <script src="./assets/JavaScript/app.js"></script>
   </body>
