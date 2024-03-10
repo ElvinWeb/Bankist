@@ -137,6 +137,7 @@ img {
   display: flex;
   align-items: center;
   list-style: none;
+  cursor: pointer;
 }
 
 .nav__item {
