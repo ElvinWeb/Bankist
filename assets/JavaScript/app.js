@@ -43,3 +43,19 @@ btnScrollTo.addEventListener("click", function (e) {
   console.log(s1coords);
   section1.scrollIntoView({ behavior: "smooth" });
 });
+tabsContainer.addEventListener("click", function (e) {
+  const clickedTab = e.target.closest(".operations__tab");
+  if (!clickedTab) return;
+
+  //remove active classes
+  tabs.forEach((tab) => tab.classList.remove("operations__tab--active"));
+  tabsContent.forEach((content) =>
+    content.classList.remove("operations__content--active")
+  );
+
+  //adding active classes
+  clickedTab.classList.add("operations__tab--active");
+  document
+    .querySelector(`.operations__content--${clickedTab.dataset.tab}`)
+    .classList.add("operations__content--active");
+});
