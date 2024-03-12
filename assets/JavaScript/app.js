@@ -1,7 +1,9 @@
 "use strict";
 const header = document.querySelector(".header");
+const allSections = document.querySelectorAll(".section");
 const modal = document.querySelector(".modal");
 const overlay = document.querySelector(".overlay");
+const imgTargets = document.querySelectorAll("img[data-src]");
 const btnCloseModal = document.querySelector(".btn--close-modal");
 const btnsOpenModal = document.querySelectorAll(".btn--show-modal");
 const btnScrollTo = document.querySelector(".btn--scroll-to");
@@ -66,6 +68,22 @@ const stickyNav = function (entries) {
     nav.classList.remove("sticky");
   }
 };
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.remove("section--hidden");
+};
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.src = entry.target.dataset.src;
+
+  entry.target.addEventListener("load", function () {
+    entry.target.classlist.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
 btnsOpenModal.forEach((btn) => btn.addEventListener("click", openModal));
 btnCloseModal.addEventListener("click", closeModal);
 overlay.addEventListener("click", closeModal);
@@ -84,7 +102,21 @@ nav.addEventListener("mouseover", fadeAnimation.bind(0.5));
 nav.addEventListener("mouseout", fadeAnimation.bind(1));
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  rootMargin: `-${navHeight}px`,
   threshold: 0,
+  rootMargin: `-${navHeight}px`,
+});
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.15,
+});
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+  rootMargin: "200px",
+});
+imgTargets.forEach((image) => imgObserver.observe(image));
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+  section.classList.add("section--hidden");
 });
 headerObserver.observe(header);
