@@ -74,3 +74,14 @@ img {
 .lazy-img {
     filter: blur(20px);
 }
+
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
