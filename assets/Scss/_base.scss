@@ -1,7 +1,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
+    text-decoration: none;
 }
 
 html {
@@ -15,4 +16,13 @@ body {
     color: #444;
     line-height: 1.9;
     background-color: #f3f3f3;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $color-primary-darker;
+    border-radius: 500px;
 }

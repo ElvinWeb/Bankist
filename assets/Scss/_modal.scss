@@ -10,6 +10,50 @@
     z-index: 1000;
     transition: all 0.5s;
     border-radius: 10px;
+
+    &__header {
+        font-size: 3.25rem;
+        margin-bottom: 4.5rem;
+        line-height: 1.5;
+    }
+
+    &__form {
+        margin: 0 3rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        gap: 2.5rem;
+
+        label {
+            font-size: 1.7rem;
+            font-weight: 500;
+        }
+
+        input {
+            font-size: 1.7rem;
+            padding: 1rem 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 0.5rem;
+        }
+
+        button {
+            grid-column: 1 / span 2;
+            justify-self: center;
+            margin-top: 1rem;
+        }
+    }
+
+    .btn--close-modal {
+        font-family: inherit;
+        color: inherit;
+        position: absolute;
+        top: 0.5rem;
+        right: 2rem;
+        font-size: 4rem;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
 }
 
 .overlay {
@@ -22,50 +66,6 @@
     backdrop-filter: blur(4px);
     z-index: 100;
     transition: all 0.5s;
-}
-
-.modal__header {
-    font-size: 3.25rem;
-    margin-bottom: 4.5rem;
-    line-height: 1.5;
-}
-
-.modal__form {
-    margin: 0 3rem;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center;
-    gap: 2.5rem;
-}
-
-.modal__form label {
-    font-size: 1.7rem;
-    font-weight: 500;
-}
-
-.modal__form input {
-    font-size: 1.7rem;
-    padding: 1rem 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-}
-
-.modal__form button {
-    grid-column: 1 / span 2;
-    justify-self: center;
-    margin-top: 1rem;
-}
-
-.btn--close-modal {
-    font-family: inherit;
-    color: inherit;
-    position: absolute;
-    top: 0.5rem;
-    right: 2rem;
-    font-size: 4rem;
-    cursor: pointer;
-    border: none;
-    background: none;
 }
 
 .hidden {
