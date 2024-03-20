@@ -2,16 +2,23 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 9rem;
-    width: 100%;
+    @include size(9rem, 100%);
     padding: 0 6rem;
     z-index: 100;
+
+    @include sm {
+        padding: 0;
+    }
 
 
 
     &.sticky {
         position: fixed;
         background-color: rgba(255, 255, 255, 0.95);
+
+        @include sm {
+            padding: 0 2rem;
+        }
     }
 
     &__logo {
@@ -29,9 +36,7 @@
             display: none;
             position: relative;
             cursor: pointer;
-            height: 40px;
-            width: 40px;
-
+            @include size(40px, 40px);
             @include lg {
                 display: block;
             }
@@ -63,8 +68,7 @@
 
             &__line {
                 position: absolute;
-                height: 2.5px;
-                width: 27px;
+                @include size(2.5px,27px);
                 background-color: $color-primary;
                 border-radius: 50px;
                 transition: all 0.3s ease;

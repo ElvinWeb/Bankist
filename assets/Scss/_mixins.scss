@@ -21,3 +21,20 @@
         @content;
     }
 }
+
+@mixin size($height, $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin position($position, $top, $left) {
+    position: $position;
+    top: $top;
+    left: $left;
+}
+
+@mixin flexbox($display, $align, $justify) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}

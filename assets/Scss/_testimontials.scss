@@ -2,11 +2,13 @@
     width: 65%;
     position: relative;
 
+    @include md {
+        width: 70%;
+    }
+
     &::before {
         content: "\201C";
-        position: absolute;
-        top: -5.7rem;
-        left: -6.8rem;
+        @include position(absolute, -5.7rem, -6.8rem);
         line-height: 1;
         font-size: 20rem;
         font-family: inherit;
@@ -27,7 +29,6 @@
     }
 
     &__author {
-        margin-left: 3rem;
         font-style: normal;
         display: grid;
         grid-template-columns: 6.5rem 1fr;

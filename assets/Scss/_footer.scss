@@ -1,5 +1,5 @@
 .footer {
-    padding: 10rem 3rem;
+    padding: 7rem 3rem 3rem 3rem;
     background-color: #37383d;
     display: flex;
     flex-direction: column;
@@ -10,6 +10,13 @@
         display: flex;
         justify-content: center;
         margin-bottom: 5rem;
+
+        @include md {
+            flex-direction: column;
+            text-align: center;
+            row-gap: 8px;
+            margin-left: 3rem;
+        }
     }
 
     &__item {
@@ -20,12 +27,15 @@
         font-size: 1.6rem;
         color: #eee;
         text-decoration: none;
+        transition: all 0.2s ease-in;
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 
     &__logo {
-        height: 5rem;
-        display: block;
-        margin: 0 auto;
+        @include size(5rem,5rem);
         margin-bottom: 5rem;
     }
 }

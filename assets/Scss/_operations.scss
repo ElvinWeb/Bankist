@@ -44,13 +44,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 7rem;
-        width: 7rem;
+        @include size(7rem, 7rem);
         border-radius: 50%;
 
         svg {
-            height: 2.75rem;
-            width: 2.75rem;
+            @include size(2.75rem, 2.75rem);
         }
     }
 

@@ -70,6 +70,11 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
+@media only screen and (max-width: 768px) {
+  .btn {
+    padding: 1.5rem 2.5rem;
+  }
+}
 
 .btn:hover {
   background-color: #4bbb7d;
@@ -135,7 +140,13 @@ img {
 }
 @media only screen and (max-width: 1200px) {
   .header__title {
-    margin-top: 50px;
+    margin-top: 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header__title {
+    grid-template-columns: 1fr;
+    margin-top: 0;
   }
 }
 .header__title h1 {
@@ -165,8 +176,8 @@ img {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 100%;
   width: 100%;
+  height: 100%;
   z-index: -1;
   opacity: 0.7;
   transform: scale(1.07, 1.05) skewX(-15deg);
@@ -185,7 +196,7 @@ img {
 }
 
 .footer {
-  padding: 10rem 3rem;
+  padding: 7rem 3rem 3rem 3rem;
   background-color: #37383d;
   display: flex;
   flex-direction: column;
@@ -197,6 +208,14 @@ img {
   justify-content: center;
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 768px) {
+  .footer__nav {
+    flex-direction: column;
+    text-align: center;
+    row-gap: 8px;
+    margin-left: 3rem;
+  }
+}
 .footer__item {
   margin-right: 4rem;
 }
@@ -204,11 +223,14 @@ img {
   font-size: 1.6rem;
   color: #eee;
   text-decoration: none;
+  transition: all 0.2s ease-in;
+}
+.footer__link:hover {
+  color: #5ec576;
 }
 .footer__logo {
+  width: 5rem;
   height: 5rem;
-  display: block;
-  margin: 0 auto;
   margin-bottom: 5rem;
 }
 
@@ -216,14 +238,24 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 9rem;
   width: 100%;
+  height: 9rem;
   padding: 0 6rem;
   z-index: 100;
+}
+@media only screen and (max-width: 576px) {
+  .nav {
+    padding: 0;
+  }
 }
 .nav.sticky {
   position: fixed;
   background-color: rgba(255, 255, 255, 0.95);
+}
+@media only screen and (max-width: 576px) {
+  .nav.sticky {
+    padding: 0 2rem;
+  }
 }
 .nav__logo {
   height: 4.5rem;
@@ -239,8 +271,8 @@ img {
   display: none;
   position: relative;
   cursor: pointer;
-  height: 40px;
   width: 40px;
+  height: 40px;
 }
 @media only screen and (max-width: 992px) {
   .nav__links .toggle {
@@ -270,8 +302,8 @@ img {
 }
 .nav__links .toggle__line {
   position: absolute;
-  height: 2.5px;
   width: 27px;
+  height: 2.5px;
   background-color: #5ec576;
   border-radius: 50px;
   transition: all 0.3s ease;
@@ -326,7 +358,12 @@ img {
 }
 @media only screen and (max-width: 992px) {
   .features {
-    margin: 0;
+    margin: 0 2rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .features {
+    grid-template-columns: 1fr;
   }
 }
 .features__img {
@@ -343,14 +380,14 @@ img {
   align-items: center;
   justify-content: center;
   background-color: rgba(94, 197, 118, 0.2274509804);
-  height: 5.5rem;
   width: 5.5rem;
+  height: 5.5rem;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
 .features__icon svg {
-  height: 2.5rem;
   width: 2.5rem;
+  height: 2.5rem;
   fill: #5ec576;
 }
 .features__header {
@@ -396,13 +433,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 7rem;
   width: 7rem;
+  height: 7rem;
   border-radius: 50%;
 }
 .operations__icon svg {
-  height: 2.75rem;
   width: 2.75rem;
+  height: 2.75rem;
 }
 .operations__content {
   display: none;
@@ -451,6 +488,11 @@ img {
   position: relative;
   overflow: hidden;
 }
+@media only screen and (max-width: 576px) {
+  .slider {
+    height: 55rem;
+  }
+}
 .slider .slide {
   position: absolute;
   top: 0;
@@ -476,9 +518,9 @@ img {
   font-family: inherit;
   color: #333;
   border-radius: 50%;
-  height: 5.5rem;
-  width: 5.5rem;
-  font-size: 3.25rem;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.4rem;
   cursor: pointer;
 }
 .slider__btn--left {
@@ -496,12 +538,17 @@ img {
   transform: translateX(-50%);
   display: flex;
 }
+@media only screen and (max-width: 768px) {
+  .slider .dots {
+    bottom: 0;
+  }
+}
 .slider .dots__dot {
   border: none;
   background-color: #b9b9b9;
   opacity: 0.7;
-  height: 1rem;
   width: 1rem;
+  height: 1rem;
   border-radius: 50%;
   margin-right: 1.75rem;
   cursor: pointer;
@@ -518,6 +565,11 @@ img {
 .testimonial {
   width: 65%;
   position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .testimonial {
+    width: 70%;
+  }
 }
 .testimonial::before {
   content: "“";
@@ -541,7 +593,6 @@ img {
   color: #666;
 }
 .testimonial__author {
-  margin-left: 3rem;
   font-style: normal;
   display: grid;
   grid-template-columns: 6.5rem 1fr;
@@ -580,10 +631,31 @@ img {
   transition: all 0.5s;
   border-radius: 10px;
 }
+@media only screen and (max-width: 992px) {
+  .modal {
+    padding: 6rem 5rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal {
+    padding: 5rem 6rem;
+  }
+}
 .modal__header {
   font-size: 3.25rem;
   margin-bottom: 4.5rem;
   line-height: 1.5;
+}
+@media only screen and (max-width: 992px) {
+  .modal__header {
+    font-size: 2.9rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal__header {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+  }
 }
 .modal__form {
   margin: 0 3rem;
@@ -591,6 +663,16 @@ img {
   grid-template-columns: 1fr 2fr;
   align-items: center;
   gap: 2.5rem;
+}
+@media only screen and (max-width: 992px) {
+  .modal__form {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .modal__form {
+    display: inline-block;
+  }
 }
 .modal__form label {
   font-size: 1.7rem;
@@ -607,13 +689,18 @@ img {
   justify-self: center;
   margin-top: 1rem;
 }
+@media only screen and (max-width: 768px) {
+  .modal__form button {
+    margin-top: 2rem;
+  }
+}
 .modal .btn--close-modal {
   font-family: inherit;
   color: inherit;
   position: absolute;
-  top: 0.5rem;
+  top: 1rem;
   right: 2rem;
-  font-size: 4rem;
+  font-size: 3rem;
   cursor: pointer;
   border: none;
   background: none;
