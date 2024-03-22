@@ -1,0 +1,27 @@
+{
+  "name": "bankistwebsite",
+  "version": "1.0.0",
+  "description": "<h3>#Bankist // When Banking meets Minimalist</h3>",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElvinWeb/Bankist.git"
+  },
+  "author": "Elvin Sarkarov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElvinWeb/Bankist/issues"
+  },
+  "homepage": "https://github.com/ElvinWeb/Bankist#readme",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "parcel": "^2.12.0"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0"
+  }
+}

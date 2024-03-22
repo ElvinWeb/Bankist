@@ -33,6 +33,27 @@
     left: $left;
 }
 
+@mixin position1($position: relative, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+
+    @if $top {
+        top: $top;
+    }
+
+    @if $right {
+        right: $right;
+    }
+
+    @if $bottom {
+        bottom: $bottom;
+    }
+
+    @if $left {
+        left: $left;
+    }
+}
+
+
 @mixin flexbox($display, $align, $justify) {
     display: $display;
     align-items: $align;

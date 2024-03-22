@@ -18,8 +18,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <link rel="stylesheet" href="./assets/StyleSheet/main.css" />
+    <link rel="stylesheet" href="./assets/Scss/main.scss" />
     <script defer src="./assets/JavaScript/app.js"></script>
+
     <title>Bankist // When Banking meets Minimalist</title>
   </head>
   <body>
@@ -48,15 +49,10 @@
               >Open account</a
             >
           </li>
-          <li class="toggle">
-            <input type="checkbox" class="toggle__check" />
-            <div>
-              <span class="toggle__line--top toggle__line"></span>
-              <span class="toggle__line--mid toggle__line"></span>
-              <span class="toggle__line--bottom toggle__line"></span>
-            </div>
-          </li>
         </ul>
+        <div class="toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
 
       <div class="header__title">
@@ -87,7 +83,7 @@
       <div class="features">
         <img
           src="./assets/Images/digital-lazy.jpg"
-          data-src="./assets/Images/digital.jpg"
+          data-src="/assets/Images/digital-lazy.jpg"
           alt="Computer"
           class="features__img lazy-img"
         />
@@ -107,7 +103,7 @@
 
         <img
           src="./assets/Images/grow-lazy.jpg"
-          data-src="./assets/Images/grow.jpg"
+          data-src="/assets/Images/grow.jpg"
           alt="Plant"
           class="features__img lazy-img"
         />
@@ -129,7 +125,7 @@
 
         <img
           src="./assets/Images/card-lazy.jpg"
-          data-src="./assets/Images/card.jpg"
+          data-src="/assets/Images/card.jpg"
           alt="Credit card"
           class="features__img lazy-img"
         />

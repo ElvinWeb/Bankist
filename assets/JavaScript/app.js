@@ -14,7 +14,7 @@ const bankist = (function () {
   const btnRight = document.querySelector(".slider__btn--right");
   const section1 = document.querySelector("#section--1");
   const navLinks = document.querySelector(".nav__links");
-  const allNavLink = document.querySelectorAll(".nav__link");
+  const toggleMenuBtn = document.querySelector(".toggle");
   const nav = document.querySelector(".nav");
   const navHeight = nav.getBoundingClientRect().height;
   const tabs = document.querySelectorAll(".operations__tab");
@@ -38,6 +38,9 @@ const bankist = (function () {
       const id = e.target.getAttribute("href");
       document.querySelector(id).scrollIntoView({ behavior: "smooth" });
     }
+  };
+  const _toggleMenu = function () {
+    navLinks.classList.toggle("active");
   };
   const _showTab = function (e) {
     const clickedTab = e.target.closest(".operations__tab");
@@ -137,6 +140,7 @@ const bankist = (function () {
     overlay.addEventListener("click", _closeModal);
     navLinks.addEventListener("click", _pageNavigation);
     tabsContainer.addEventListener("click", _showTab);
+    toggleMenuBtn.addEventListener("click", _toggleMenu);
     document.addEventListener("keydown", function (e) {
       if (e.key === "Escape" && !modal.classList.contains("hidden")) {
         _closeModal();

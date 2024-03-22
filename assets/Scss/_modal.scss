@@ -1,5 +1,5 @@
 .modal {
-    @include position(fixed, 50%, 50%);
+    @include position1(fixed, 50%, null, null, 50%);
     transform: translate(-50%, -50%);
     max-width: 60rem;
     background-color: #f3f3f3;
@@ -77,6 +77,7 @@
         position: absolute;
         top: 1rem;
         right: 2rem;
+        @include position1(absolute, 1rem, 2rem, null, null);
         font-size: 3rem;
         cursor: pointer;
         border: none;
@@ -85,7 +86,7 @@
 }
 
 .overlay {
-    @include position(fixed, 0, 0);
+    @include position1(fixed, 0, null, null, 0);
     @include size(100%, 100%);
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(4px);
